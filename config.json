@@ -1,0 +1,4 @@
+{
+    "connectionString": "mongodb://localhost:27017/nodejs_api",
+    "secret": "123456789"
+}
