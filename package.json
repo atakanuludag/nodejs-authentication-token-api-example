@@ -1,5 +1,5 @@
 {
-  "name": "nodejs-json-api-authentication",
+  "name": "nodejs-authentication-token-api-example",
   "version": "1.0.0",
   "description": "NodeJS JSON Api User Auth",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/atknuludag"
+    "url": "https://github.com/atakanuludag"
   },
   "keywords": [
     "nodejs",

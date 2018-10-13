@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "b5529fa5-350a-4d22-b33e-2504d72b0420",
+		"name": "NodeJS Auth Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"atknuludag\",\n\t\"password\": \"19941907\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/authentication",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"authentication"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Users List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{api_url}}/user/list",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{api_url}}/user/me",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{api_url}}/user/delete/5bb7ced02de6f82f2cf9c592",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"delete",
+								"5bb7ced02de6f82f2cf9c592"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}"
+							},
+							{
+								"key": "user_id",
+								"value": "{{user_id}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"iletisim@atknuludag.com\",\n    \"firstName\": \"Atakan Yasin\",\n    \"lastName\": \"Uludağ\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/user/update/5bb7cd428163163044967c14",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"update",
+								"5bb7cd428163163044967c14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Atakan Yasin\",\n\t\"lastName\": \"Uludağ\",\n\t\"email\": \"atknuludag@gmail.com\",\n\t\"username\": \"atknuludag\",\n\t\"password\": \"19941907\"\n}"
+						},
+						"url": {
+							"raw": "{{api_url}}/user/register",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
